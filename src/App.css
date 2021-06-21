@@ -1,0 +1,239 @@
+html body {
+  /*Set background to image with no reapeat*/
+    background: url(./background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.App{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+/* Ajust all child elements to be 30px apart */
+.App > *{
+    margin-top: 40px;
+}
+.title{
+    text-align: left;
+    width: 100%;
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    text-indent: 20px;
+    font-weight: 500;
+}
+
+.inputContainer{
+  display: flex;
+  width: 100%;
+  justify-content: center ;
+  
+}
+
+.locationInput{
+    width: 30%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background: url(search.png) no-repeat scroll 10px 12px;
+    background-color: aliceblue;
+    padding-left:30px;
+    color: #2b2b2b;
+    font-size: 1rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.locationInput{
+    outline: none;
+}
+
+.locationButton{
+  background-color: aliceblue;
+  margin-left: 15px;
+  border: solid aliceblue;
+  color: #818181;
+  border-radius: 8px;
+  height: 40px;
+}
+
+.locationButton:hover{
+  background-color: rgb(204, 204, 204);
+  border-color: rgb(204, 204, 204);
+}
+/* When width is below 407px change input size to 80%*/
+@media screen and (max-width: 407px) {
+  .locationInput {
+    width: 60%;
+    min-width: 0px;
+    
+}
+
+}
+.areaAndDateDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+}
+/* When width is below 423px change div to be 90% width of screen */
+@media screen and (max-width: 423px) {
+  .areaAndDateDiv{
+      width: 90%;   
+  }   
+}
+
+.locationText{
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.dateText{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+/*Desktop View move div to left and ajust fonts*/
+@media screen and (min-width: 601px) {
+  .areaAndDateDiv {
+    margin-right: auto;
+    margin-left: 40px;
+    
+  }
+  .locationText{
+      font-size: 50px;
+      white-space: nowrap;
+      text-align: left;
+  }
+  .dateText{
+      text-align: left;
+      font-size: 25px;
+  }
+}
+
+/* Holds temperature and temperature stats*/
+.curretTempAndStats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+/* Holds icon and temperature */
+.iconAndTemp{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.weatherIcon{
+    width: 110px;
+}
+
+.weatherTemp{
+    font-size: 2.6rem;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.weatherDescription{
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    margin-left: 15px;
+}
+
+/* Holds all six weather info stats*/
+.weatherInfo{
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    width: 337px;
+    height: 200px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(15px);
+    border-radius: 13px;
+}
+/* When screen width is below 309px make weather info 100% of screen width*/
+@media screen and (max-width: 309px) {
+  .weatherInfo{
+    width: 100%;
+    height: auto;
+  } 
+}
+
+
+@media screen and (min-width: 601px) {
+/* When screen gets larger change the postioning of the temperature and stats */
+  .curretTempAndStats {
+    height: 350px;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  /* Ajust div to fit icon and text*/
+  .iconAndTemp{
+    justify-content: left;
+    width: 400px;
+  }
+  /* Ajust weather info height and width*/
+  .weatherInfo{
+    width: 300px;
+    height: 85%;
+    
+  }
+  
+  /* Make icon size bigger*/
+  .weatherIcon{
+    width: 150px;
+  }
+  /* Ajust weather temp font size*/
+  .weatherTemp{
+    font-size: 3rem;
+  }
+/* Ajust weather description font size*/
+  .weatherDescription{
+    font-size: 1.6rem;
+  }
+}
+
+/* Ajust weather info div to fit text*/
+@media screen and (min-width: 900px) {
+/* Ajust weather info div to fit text*/
+  .weatherInfo{
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+/* Ajust weather icon size*/
+  .weatherIcon{
+    width: 250px;
+  }
+/* Ajust weather temp font size*/
+  .weatherTemp{
+    font-size: 4rem;
+  }
+/* Ajust weather description font size*/
+  .weatherDescription{
+    font-size: 2rem;
+  }
+}
